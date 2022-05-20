@@ -6,7 +6,8 @@ using System.Net.Http;
 using System.Text.Json;
 using System.Text.Json.Nodes;
 
-class Program {
+class Program 
+{
     public static async Task Main()
     {
 
