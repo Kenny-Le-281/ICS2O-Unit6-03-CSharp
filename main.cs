@@ -24,7 +24,7 @@ class Program
         JsonNode weatherNode = forecastNode!["main"]!;
         // Console.WriteLine(weatherNode);
         JsonNode temperatureNode = weatherNode!["temp"]!;
-        String temperatureString = temperatureNode.ToString();
+        string temperatureString = temperatureNode.ToString();
         double temperatureDouble = Convert.ToDouble(temperatureString);
         temperatureDouble = temperatureDouble - 273.15;
         Console.WriteLine("The temperature is " + temperatureDouble.ToString("0") + "°C");
