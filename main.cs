@@ -21,8 +21,12 @@ class Program {
         JsonNode forecastNode = JsonNode.Parse(response)!;
         // Console.WriteLine(forecastNode);
         JsonNode weatherNode = forecastNode!["main"]!;
-        // Console.WriteLine(windNode);
+        // Console.WriteLine(weatherNode);
         JsonNode temperatureNode = weatherNode!["temp"]!;
-        Console.WriteLine("The temperature is " + temperatureNode + "°C");
+        double temperature = Convert.ToDouble(temperatureNode);
+        temperature = temperature - 273.15;
+        Console.WriteLine("The temperature is " + temperature + "°C");
+        Console.WriteLine("");
+        Console.WriteLine("\nDone.");
     }
 }
